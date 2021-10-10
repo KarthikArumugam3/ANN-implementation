@@ -1,5 +1,5 @@
 from src.utils.common import read_config
-from src.utils.data_mgmt import get_data
+from src.utils.data_mgmt import get_data, plot_accuracy
 from src.utils.model import create_model
 import argparse
 
@@ -21,6 +21,9 @@ def training(config_path):
     VALIDATION = (X_valid, y_valid)
     
     history = model.fit(X_train, y_train, epochs=EPOCHS, validation_data=VALIDATION)
+
+    plots_directory_name = config["artifacts"]["plots_dir"]
+    plot_accuracy("accuracy.png", history, plots_directory_name)
    
 
 if __name__ == '__main__':
