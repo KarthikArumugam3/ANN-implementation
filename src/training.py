@@ -33,7 +33,7 @@ def training(config_path):
     #logging.info("Starting model training")
     history = model.fit(X_train, y_train, epochs=EPOCHS, validation_data=VALIDATION)
 
-    #Saving accuracy plot
+    #Saving accuracy plot to artifacts folder
     artifacts_dir = config["artifacts"]["artifacts_dir"]
     plot_dir = config["artifacts"]["plot_dir"]
     plot_dir_path = os.path.join(artifacts_dir, plot_dir)
@@ -42,7 +42,7 @@ def training(config_path):
     save_plot_accuracy(plot_name, history, plot_dir_path)
     #logging.info("Model training complete")
 
-    # Saving trained model :-
+    # Saving trained model to artifacts folder:-
     model_dir = config["artifacts"]["model_dir"]
     model_dir_path = os.path.join(artifacts_dir, model_dir)
     os.makedirs(model_dir_path, exist_ok=True)
