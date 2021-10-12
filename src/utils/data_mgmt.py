@@ -3,8 +3,11 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import os
 import pandas as pd
+#import logging
 
 def get_data(validation_datasize):
+
+    #logging.info("Preparing the data for the NN model")
 
     mnist = tf.keras.datasets.mnist
     (X_train_full, y_train_full), (X_test, y_test) = mnist.load_data()
@@ -20,16 +23,4 @@ def get_data(validation_datasize):
 
 
     return (X_train, y_train), (X_valid, y_valid), (X_test, y_test)
-
-
-def plot_accuracy(file_name, model,plot_dir_name):
-
-    pd.DataFrame(model.history).plot(figsize=(10,7))
-    plt.grid(True)
-
-
-    plot_dir = plot_dir_name
-    os.makedirs(plot_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
-    plotPath = os.path.join(plot_dir, file_name) # model/filename
-    plt.savefig(plotPath) 
 
