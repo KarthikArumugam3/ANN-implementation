@@ -16,13 +16,13 @@ Jupyter notebook implementation:-
 ## Tech
 The project uses the following technologies/packages :- 
 
-- ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
-- ![Tensorflow](https://img.shields.io/badge/-TensorFlow-black?style=flat-square&logo=TensorFlow)
-- ![Keras](https://img.shields.io/badge/-Keras-black?style=flat-square&logo=Keras)
-- ![Pandas](https://img.shields.io/badge/-Pandas-black?style=flat-square&logo=Pandas)
-- ![Numpy](https://img.shields.io/badge/-Numpy-black?style=flat-square&logo=Numpy)
+- ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+- ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logoColor=white)
+- ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=Keras&logoColor=white)
+- ![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white) 
+- ![Numpy](https://img.shields.io/badge/-Numy-013243?logo=numpy&logoColor=white)
 - ![Matplotlib](https://img.shields.io/badge/-Matplotlib-black?style=flat-square&logo=Matplotlib)
-- ![Seaborn](https://img.shields.io/badge/-Seaborn-black?logo=seaborn&logoColor=white)
+- ![Seaborn](https://img.shields.io/badge/-Seaborn-6d8bcf?logo=seaborn&logoColor=white)
 - [![Editor](https://img.shields.io/badge/Editor-VSCode-blue?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
 - ![PyCharm](https://img.shields.io/badge/-PyCharm-000000?logo=pycharm&logoColor=white)
 
