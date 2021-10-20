@@ -47,14 +47,6 @@ conda create -n env_name
 conda create --prefix ./envs
 ```
 
-# Development
-
-#### What?
-I have worked on a project that aims at classifying different handwritten digits into their respective classes from 1-9.
-
-#### How?
-First the dataset is loaded and seperated into Train, Validation & Test datasets.
-A 
 
 
 ## Author:-
