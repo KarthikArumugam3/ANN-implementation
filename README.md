@@ -1,2 +1,61 @@
-# ANN-implementation in jupyter NB
-[Implementation of an Artificial Neural Network](https://colab.research.google.com/drive/1pzBodNobgUOa2dGgoHOjqPmjNUe0GjmO?authuser=1#scrollTo=ZB4f_r_y5UCE)
+# ANN-implementation
+Jupyter notebook implementation:-
+[Implementation_of_an_Artificial Neural_Network.ipynb](https://colab.research.google.com/drive/1pzBodNobgUOa2dGgoHOjqPmjNUe0GjmO?authuser=1#scrollTo=ZB4f_r_y5UCE)
+## Project Description
+### Working on mnist dataset - 
+
+* This dataset contains handwritten digits. 
+* It has 10 classes i.e. 0 to 9
+* Each data point is 2D array of 28x28 size.
+* Also known as hello world dataset for ANN
+
+[Image source](https://en.wikipedia.org/wiki/MNIST_database#/media/File:MnistExamples.png)
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png)
+
+## Tech
+The project uses the following technologies/packages :- 
+
+- ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
+- ![Tensorflow](https://img.shields.io/badge/-TensorFlow-black?style=flat-square&logo=TensorFlow)
+- ![Keras](https://img.shields.io/badge/-Keras-black?style=flat-square&logo=Keras)
+- ![Pandas](https://img.shields.io/badge/-Pandas-black?style=flat-square&logo=Pandas)
+- ![Numpy](https://img.shields.io/badge/-Numpy-black?style=flat-square&logo=Numpy)
+- ![Matplotlib](https://img.shields.io/badge/-Matplotlib-black?style=flat-square&logo=Matplotlib)
+- ![Seaborn](https://img.shields.io/badge/-Seaborn-black?logo=seaborn&logoColor=white)
+- [![Editor](https://img.shields.io/badge/Editor-VSCode-blue?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+- ![PyCharm](https://img.shields.io/badge/-PyCharm-000000?logo=pycharm&logoColor=white)
+
+
+## Installation:-
+
+All the packages related to this project have been listed down in the requirements.txt file.
+
+Install the packages in active environment using:-
+```
+pip install requirements.txt
+```
+
+For working in isolated conda environments:-
+1. Create a virtual environment in conda at the default location in windows:
+```
+conda create -n env_name
+```
+
+2. To create a virtual env in the current working directory:-
+```
+conda create --prefix ./envs
+```
+
+# Development
+
+#### What?
+I have worked on a project that aims at classifying different handwritten digits into their respective classes from 1-9.
+
+#### How?
+First the dataset is loaded and seperated into Train, Validation & Test datasets.
+A 
+
+
+## Author:-
+[Karthik Arumugam](https://github.com/KarthikArumugam3)
