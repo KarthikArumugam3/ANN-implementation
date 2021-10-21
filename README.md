@@ -31,20 +31,29 @@ The project uses the following technologies/packages :-
 
 All the packages related to this project have been listed down in the requirements.txt file.
 
-Install the packages in active environment using:-
+* Install the packages in active environment using:-
 ```
 pip install requirements.txt
 ```
-
-For working in isolated conda environments:-
-1. Create a virtual environment in conda at the default location in windows:
+------------
+* For working in isolated conda environments:-
+1. Create a virtual environment in conda at the default env location in windows:
 ```
 conda create -n env_name
 ```
-
+-----------
 2. To create a virtual env in the current working directory:-
 ```
 conda create --prefix ./envs
+```
+-----------
+* To run the main python script of the project:-
+```
+python src/training.py
+```
+* To use TensorBoard 
+```
+tensorboard --logdir logs/fit 
 ```
 
 

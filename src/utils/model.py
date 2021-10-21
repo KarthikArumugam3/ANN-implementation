@@ -71,3 +71,21 @@ def create_log(log_dir_path,data):
   with file_writer.as_default():
     images = np.reshape(data[10:30], (-1, 28, 28, 1)) ### <<< 20, 28, 28, 1
     tf.summary.image("20 handwritten digit samples", images, max_outputs=25, step=0)
+
+def get_callbacks(log_dir, early_stopping_patience, ckpt_path_name):
+  callbacks_list = []
+
+  # Tensorboard callback
+  tensorboard_cb = tf.keras.callbacks.TensorBoard(log_dir=log_dir)
+  callbacks_list.append(tensorboard_cb)
+
+  # Early stopping callback
+  early_stopping_cb = tf.keras.callbacks.EarlyStopping(patience=early_stopping_patience, restore_best_weights=True)
+  callbacks_list.append(early_stopping_cb)
+
+  # Model Chekckpoint callback
+  CKPT_path = ckpt_path_name
+  checkpointing_cb = tf.keras.callbacks.ModelCheckpoint(CKPT_path, save_best_only=True)
+  callbacks_list.append(checkpointing_cb)
+
+  return callbacks_list

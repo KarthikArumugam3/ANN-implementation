@@ -6,6 +6,7 @@ params:
   metrics: accuracy
   optimizer: SGD
   validation_datasize: 5000
+  early_stopping_patience: 5
 
 
 artifacts:   
@@ -15,6 +16,8 @@ artifacts:
   checkpoint_dir: checkpoints
   model_name: model.h5
   plot_name: accuracy.png
+  ckpt_dir: modelckpt
+  ckpt_name: model_ckpt.h5
 
 logs:
   logs_dir: logs_dir
