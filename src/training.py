@@ -1,6 +1,6 @@
 from src.utils.common import read_config
 from src.utils.data_mgmt import get_data
-from src.utils.model import create_model,save_plot_accuracy, save_model, get_prediction
+from src.utils.model import create_model,save_plot_accuracy, save_model, get_prediction, get_log_path, create_log
 import argparse
 import logging
 import os
@@ -20,6 +20,9 @@ def training(config_path):
     validation_datasize = config["params"]["validation_datasize"]
 
     (X_train, y_train), (X_valid, y_valid), (X_test, y_test) = get_data(validation_datasize)
+
+    log_dir_name = get_log_path()
+    create_log(log_dir_name, X_train)
 
     LOSS_FUNCTION = config["params"]["loss_function"]
     OPTIMIZER = config["params"]["optimizer"]

@@ -58,3 +58,16 @@ def get_prediction(test_data,test_data_ans,model):
     print("\nModel predicting.....")
     y_pred = np.argmax(model.predict(X_test_new), axis=-1)
     return y_pred
+
+def get_log_path(log_dir="logs/fit"):
+  uniqueName = time.strftime("log_%Y_%m_%d_%H_%M_%S")
+  log_path = os.path.join(log_dir, uniqueName)
+  print(f"savings logs at: {log_path}")
+
+  return log_path
+
+def create_log(log_dir_path,data):
+  file_writer = tf.summary.create_file_writer(logdir=log_dir_path)
+  with file_writer.as_default():
+    images = np.reshape(data[10:30], (-1, 28, 28, 1)) ### <<< 20, 28, 28, 1
+    tf.summary.image("20 handwritten digit samples", images, max_outputs=25, step=0)
