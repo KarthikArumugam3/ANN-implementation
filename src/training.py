@@ -1,10 +1,10 @@
 from src.utils.common import read_config
 from src.utils.data_mgmt import get_data
-from src.utils.model import create_model,save_plot_accuracy, save_model
+from src.utils.model import create_model,save_plot_accuracy, save_model, get_prediction
 import argparse
 import logging
 import os
-
+import numpy as np
 #logging_str = "[%(asctime)s: %(levelname)s: %(module)s] %(message)s"
 #log_dir = "logs"
 #os.makedirs(log_dir, exist_ok=True)
@@ -49,7 +49,18 @@ def training(config_path):
     model_name = config["artifacts"]["model_name"]
     save_model(model, model_name, model_dir_path)
 
-   
+    # Testing/Evaluaing the model on test data
+    test_loss, test_accuracy =  model.evaluate(X_test, y_test)
+    print("_________________________________________________________________")
+    print(f"Test accuracy:- {test_accuracy}")
+
+    print("\n=================================================================")
+    print("Training Complete and model is ready to be used for prediction on real world data")
+
+    # Sample prediction
+    pred_result = get_prediction(X_test, y_test, model)
+    print(f"Prediction result:- {pred_result}")
+
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()

@@ -4,13 +4,14 @@ import time
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 def create_model(LOSS_FUNCTION, OPTIMIZER, METRICS, NO_OF_CLASSES):
    #logging.info("Creating the NN model")
     LAYERS = [
           tf.keras.layers.Flatten(input_shape=[28,28], name="input_layer"),
           tf.keras.layers.Dense(units=300,activation="relu", name="hidden_layer1"),
-          tf.keras.layers.Dense(units=100,activation="relu", name="hiddel_layer2"),
+          tf.keras.layers.Dense(units=100,activation="relu", name="hidden_layer2"),
           tf.keras.layers.Dense(units=NO_OF_CLASSES,activation="softmax", name="output_layer")
           ]
 
@@ -48,3 +49,12 @@ def save_model(model, model_name, model_dir):
     unique_filename = get_unique_file_name(model_name)
     path_to_model = os.path.join(model_dir, unique_filename)
     model.save(path_to_model)
+
+def get_prediction(test_data,test_data_ans,model):
+    # Sample prediction function with test data from dataset itself, has to be scaled in future to really unseen data
+    print("\n-----------------------------------------------------------------")
+    X_test_new = test_data[:3]
+    print(f"Sample prediction:- \nActual {test_data_ans[:3]}")
+    print("\nModel predicting.....")
+    y_pred = np.argmax(model.predict(X_test_new), axis=-1)
+    return y_pred
